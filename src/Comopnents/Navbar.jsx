@@ -47,15 +47,16 @@ export default function Navbar() {
         </ul>
 
         {/* Desktop Appointment Button */}
-        <div className="hidden lg:block">
-          <ScrollLink to="contact" {...scrollBtnProps}>
+        <div 
+        className="hidden lg:block">
+          {/* <ScrollLink to="contact" {...scrollBtnProps}>
             Book Appointment
           </ScrollLink>
-          {/* OR use modal:
+          OR use modal: */}
           <button onClick={openModal} className={scrollBtnProps.className}>
             Book Appointment
           </button> 
-          */}
+         
         </div>
 
         {/* Mobile Hamburger */}
@@ -83,9 +84,12 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <ScrollLink to="contact" {...scrollBtnProps}>
+            <button
+            onClick={openModal}
+            className={scrollBtnProps.className}
+            >
               Book Appointment
-            </ScrollLink>
+            </button>
           </li>
         </ul>
       </div>
